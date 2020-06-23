@@ -62,5 +62,5 @@ var task = new task({
 task.save().then(() => {
     console.log(task);
 }).catch((err) => {
-    console.log('Error', err)
+    console.log('Error', err) //this where if you pass a string and you defined as boolean
 });
