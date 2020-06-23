@@ -28,6 +28,11 @@ var User = mongoose.model('user', {
     age: {
         type: Number,
         dafault: 0,
+        validator(value) {
+            if (value < 0) {
+                throw new Error("Age must be positive")
+            }
+        }
 
     }
 
