@@ -34,25 +34,23 @@ Step 3: Once installed, verify it by checking the installed version using the fo
 node -v or node –version
 * Note: It is recommended to install Node Package Manager(NPM) with Node.js. NPM is an open source library of Node.js packages.
 To install NPM, use the following commands:
+...sudo apt install npm
+...npm -v or npm –version
+
 
 ### For windows OS
 https://phoenixnap.com/kb/install-node-js-npm-on-windows
 
-
-sudo apt install npm
-npm -v or npm –version
-
 2.Download MongoDB community server from official site.Navigate through software...Choose which type of deployment is best for you'
-
 in my case,navigate in below link and download the linux version of your choice
-1......
+#### linux users
 https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.6.18.tgz
-2.for window Operating System user
+#### for window Operating System user
 .....https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.18-signed.msi
-3....for macOS users
+#### for macOS users
 https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.18.tgz
 
-4. After installation, extract the files,in my case i have exracted in desktop
+. After installation, extract the files,in my case i have exracted in desktop
 and renamed the folder after extraction to mongoDB
 .create a new outside the desktop and name it mongoDB-data where all database will be accessed after we run server
 
