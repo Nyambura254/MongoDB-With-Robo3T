@@ -1,14 +1,34 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/task-manager-2', { useUnifiedTopology: true, useCreateIndex: true });
 
-//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 //create the user model structure
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
 var User = mongoose.model('user', {
     name: {
-        type: String
+        type: String,
+        //validator to prevent someone inputing invalid values
+        required: true,
+        trim: true,
+
     },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+        lowecase: true,
+        validator(value) {
+            if (!this.validator.isEmail(value)) {
+                throw new Error("Email is invalid")
+            }
+        }
+    },
+    //validator
     age: {
-        type: Number
+        type: Number,
+        dafault: 0,
+
     }
 
 });
@@ -17,8 +37,13 @@ var person = new User({
     age: 34
 });
 
-///////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //using a callback function
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 // person.save((err, user) => {
 //     if (err) {
