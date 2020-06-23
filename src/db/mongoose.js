@@ -51,7 +51,7 @@ var task = mongoose.model('task', {
     }
 
 });
-var person = new User({
+var task = new task({
     description: 'coding at lakehub',
     completed: true
 });
