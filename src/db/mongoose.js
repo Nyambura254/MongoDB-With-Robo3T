@@ -39,3 +39,28 @@ person.save().then(() => {
 }).catch((err) => {
     console.log('Error', err)
 });
+
+////////////////////////////////creating another task model structure
+//task model
+var task = mongoose.model('task', {
+    description: {
+        type: String
+    },
+    completed: {
+        type: Boolean
+    }
+
+});
+var person = new User({
+    description: 'coding at lakehub',
+    completed: true
+});
+////////////////////////////////////
+//using promises
+
+
+task.save().then(() => {
+    console.log(task);
+}).catch((err) => {
+    console.log('Error', err)
+});
