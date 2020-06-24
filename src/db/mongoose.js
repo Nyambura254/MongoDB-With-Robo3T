@@ -1,96 +1,74 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-2', { useUnifiedTopology: true, useCreateIndex: true });
+var validator = require('validator');
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {useUnifiedTopology: true, useCreateIndex: true});
+
+/*
+
 //create the user model structure
-///////////////////////////////////////////////////////////////////////////////////////////////////
-
-var User = mongoose.model('user', {
+var User = mongoose.model('User', {
     name: {
         type: String,
-        //validator to prevent someone inputing invalid values
         required: true,
-        trim: true,
-
+        trim: true
     },
     email: {
         type: String,
         required: true,
         trim: true,
-        lowecase: true,
-        validator(value) {
-            if (!this.validator.isEmail(value)) {
-                throw new Error("Email is invalid")
+        lowercase: true,
+        validate(value) {
+            if(!validator.isEmail(value)) {
+                throw new Error('Email is invalid')
             }
         }
     },
-    //validator
     age: {
         type: Number,
-        dafault: 0,
-        validator(value) {
+        default: 0,
+        validate(value) {
             if (value < 0) {
-                throw new Error("Age must be positive")
+                throw new Error('Age must be a positive number')
             }
         }
-
     }
-
 });
-var person = new User({
-    name: 'phena',
-    age: 34
+*/
+/*var person = new User({
+    name: 'Gabriel',
+    age: 18
+});*/
+
+/*person.save((err, user) => {
+    if (err) {
+        console.log('Error!', err);
+    } else {
+        console,log(user);
+    }
 });
+*/
 
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//using a callback function
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-// person.save((err, user) => {
-//     if (err) {
-//         console.log('Error', err);
-//     } else {
-//         console.log(user);
-
-//     }
-// });
-
-
-////////////////////////////////////
-//using promises
-
-
-person.save().then(() => {
-    console.log(person);
-}).catch((err) => {
-    console.log('Error', err)
-});
-
-////////////////////////////////creating another task model structure
-//task model
-var task = mongoose.model('task', {
+//model for task
+//description(type: string)
+//completed(type: Boolean)
+//create the task model structure
+/*
+var Task = mongoose.model('Task', {
     description: {
         type: String
     },
     completed: {
         type: Boolean
     }
-
 });
-var task = new task({
-    description: 'coding at lakehub',
-    completed: true
+
+var task = new Task({
+    description: 'Basket ball',
+    completed: false
 });
-////////////////////////////////////
-//using promises
-
-
 task.save().then(() => {
     console.log(task);
 }).catch((err) => {
-    console.log('Error', err) //this where if you pass a string and you defined as boolean
+    console.log('Error', err);
 });
+*/
