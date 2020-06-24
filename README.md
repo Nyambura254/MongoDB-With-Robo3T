@@ -53,4 +53,4 @@ https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.18.tgz
 . After installation, extract the files,in my case i have exracted in desktop
 and renamed the folder after extraction to mongoDB
 .create a new outside the desktop and name it mongoDB-data where all database will be accessed after we run server
-
+3. download postman to get post and get request to our robo3t
