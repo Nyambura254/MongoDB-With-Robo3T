@@ -64,6 +64,7 @@ This tutorial explains how to install Postman on Ubuntu 18.04. The same instruct
 
 ##### Open your terminal by pressing Ctrl+Alt+T and install the Postman snap package, by typing:
 $ sudo snap install postman
+
 The download may take some time depending on the speed of your connection. Once installed, the following output will be displayed:
 
 
