@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var  validator = require('validator');
+var validator = require('validator');
 
 //create the user model structure
 var User = mongoose.model('User', {
@@ -14,7 +14,7 @@ var User = mongoose.model('User', {
         trim: true,
         lowercase: true,
         validate(value) {
-            if(!validator.isEmail(value)) {
+            if (!validator.isEmail(value)) {
                 throw new Error('Email is invalid')
             }
         }

@@ -12,12 +12,12 @@ app.post('/users', (req, res) => {
     var user = new User(req.body);
 
     user.save().then(() => {
-        res.status(201).send(user);
-    }).catch((e) => {
-        res.status(400).send(e)
-    })
-    //console.log(req.body);
-    //res.send('Nodejs development');
+            res.status(201).send(user);
+        }).catch((e) => {
+            res.status(400).send(e)
+        })
+        //console.log(req.body);
+        //res.send('Nodejs development');
 });
 
 app.listen(port, () => {
