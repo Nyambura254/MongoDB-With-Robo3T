@@ -54,3 +54,17 @@ https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.18.tgz
 and renamed the folder after extraction to mongoDB
 .create a new outside the desktop and name it mongoDB-data where all database will be accessed after we run server
 3. download postman to get post and get request to our robo3t
+### How to Install Postman on Ubuntu
+Postman is a complete API development environment that helps you manage your APIs in every stage of development from designing and testing, to publishing API documentation and monitoring. Postman started as a Chrome browser extension and quickly become one of the most used API tools by developers all over the world.
+
+Postman is available as a native app (built on Electron) for all major operating systems including macOS, Linux, and Windows. Although it is possible to install and use Postman as a Chrome app, support for the Postman Chrome app is being deprecated.
+
+This tutorial explains how to install Postman on Ubuntu 18.04. The same instructions apply for Ubuntu 16.04 and any Ubuntu-based distribution, including Linux Mint, Kubuntu, and Lubuntu.
+
+##### Open your terminal by pressing Ctrl+Alt+T and install the Postman snap package, by typing:
+$ sudo snap install postman
+The download may take some time depending on the speed of your connection. Once installed, the following output will be displayed:
+
+
+Alternatively, you can install Postman using the Ubuntu Software Center. Simply search for Postman and click install:
+
