@@ -53,7 +53,8 @@ https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.18.tgz
 . After installation, extract the files,in my case i have exracted in desktop
 and renamed the folder after extraction to mongoDB
 .create a new outside the desktop and name it mongoDB-data where all database will be accessed after we run server
-3. download postman to get post and get request to our robo3t
+
+3.download postman to get post and get request to our robo3t
 ### How to Install Postman on Ubuntu
 Postman is a complete API development environment that helps you manage your APIs in every stage of development from designing and testing, to publishing API documentation and monitoring. Postman started as a Chrome browser extension and quickly become one of the most used API tools by developers all over the world.
 
