@@ -41,32 +41,15 @@ To install NPM, use the following commands:
 ### For windows OS
 https://phoenixnap.com/kb/install-node-js-npm-on-windows
 
-2.Download MongoDB community server from official site.Navigate through software...Choose which type of deployment is best for you'
-in my case,navigate in below link and download the linux version of your choice
-#### linux users
-https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.6.18.tgz
-#### for window Operating System user
-.....https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.18-signed.msi
-#### for macOS users
-https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.18.tgz
-
-. After installation, extract the files,in my case i have exracted in desktop
-and renamed the folder after extraction to mongoDB
-.create a new outside the desktop and name it mongoDB-data where all database will be accessed after we run server
-
-3.download postman to get post and get request to our robo3t
-### How to Install Postman on Ubuntu
-Postman is a complete API development environment that helps you manage your APIs in every stage of development from designing and testing, to publishing API documentation and monitoring. Postman started as a Chrome browser extension and quickly become one of the most used API tools by developers all over the world.
-
-Postman is available as a native app (built on Electron) for all major operating systems including macOS, Linux, and Windows. Although it is possible to install and use Postman as a Chrome app, support for the Postman Chrome app is being deprecated.
-
-This tutorial explains how to install Postman on Ubuntu 18.04. The same instructions apply for Ubuntu 16.04 and any Ubuntu-based distribution, including Linux Mint, Kubuntu, and Lubuntu.
-
-##### Open your terminal by pressing Ctrl+Alt+T and install the Postman snap package, by typing:
-$ sudo snap install postman
-
-The download may take some time depending on the speed of your connection. Once installed, the following output will be displayed:
-
-
-Alternatively, you can install Postman using the Ubuntu Software Center. Simply search for Postman and click install:
-
+Installing MongoDB
+Go to https://www.mongodb.com/ and choose Product – Software – MongoDB Server and download the file according to your operating system.
+Move the file to your user directory, extract the downloaded file, rename the folder to ‘mongo’, and create another folder named ‘mongo-data’.
+Open your terminal command, go to the mongo/bin folder and type the following command to activate : ./mongod –dbpath ~/mongo-data/
+Open a new tab to try to put some commands. Type ./mongo 
+Try to input a command, for example: > db.Todos.insert({text:’Create Node Tutorial’})
+Fetch the data by typing this command : > db.Todos.find(). We will get an object that we have just created.
+Close the connection by typing Ctrl + C.
+Installing Robo 3T (Robomongo)
+Download the installer from https://robomongo.org/
+Download Robo 3T and extract the compressed file.
+Connect to your local database :
